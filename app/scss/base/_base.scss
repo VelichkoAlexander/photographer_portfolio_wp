@@ -63,6 +63,7 @@ body textarea:required:valid {
   color: #ffffff;
   transition: all .5s;
   overflow-x: hidden;
+  outline: none;
   &.active {
     width: 300px;
     & .user_info {
@@ -76,6 +77,9 @@ body textarea:required:valid {
     }
     & .aside_content nav{
       margin: 35px 0;
+    }
+    & .aside_content li:hover a {
+      text-indent: 5px;
     }
 
   }
@@ -206,4 +210,27 @@ body textarea:required:valid {
 
 .btn_mnu.active .btn_row:nth-child(2) {
   opacity: 0;
+}
+//CONTENT
+.content{
+  position: relative;
+  margin: 5px 5px 55px 55px;
+  left: 0;
+}
+
+.gallery{
+   a{
+    overflow: hidden;
+    width: 320px;
+    display: block;
+  }
+   img{
+    display: block;
+    max-width: 100%;
+  }
+}
+.left_side.active  + .content{
+  left: 250px;
+  transition: all .5s;
+  transition-delay: .5s;
 }
