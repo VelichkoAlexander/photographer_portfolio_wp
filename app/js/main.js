@@ -9,45 +9,52 @@
             this.svgFallbak();
             this.niceScrolle();
             this.freeWall();
+            this.lazyLoad();
 
 
         },
         setUpListeners: function () {
-            $(".btn_mnu").click(function() {
+            $(".btn_mnu").click(function () {
                 $(this).toggleClass("active");
                 $(".left_side").toggleClass("active");
             });
         },
 
-      svgFallbak:function(){
-          if(!Modernizr.svg) {
-              $("img[src*='svg']").attr("src", function() {
-                  return $(this).attr("src").replace(".svg", ".png");
-              });
-          };
+        svgFallbak: function () {
+            if (!Modernizr.svg) {
+                $("img[src*='svg']").attr("src", function () {
+                    return $(this).attr("src").replace(".svg", ".png");
+                });
+            }
+            ;
         },
-        niceScrolle:function(){
-          $("body, .left_side").niceScroll({
-              horizrailenabled:false
-          })
+        niceScrolle: function () {
+            $("body, .left_side").niceScroll({
+                horizrailenabled: false
+            })
         },
-        freeWall:function(){
+        freeWall: function () {
             var wall = new freewall(".gallery");
             wall.reset({
                 selector: "a",
                 animate: true,
                 cellW: 150,
                 cellH: "auto",
-                gutterX : 5,
-                gutterY : 5,
-                onResize: function() {
+                gutterX: 5,
+                gutterY: 5,
+                onResize: function () {
                     wall.fitWidth();
                 }
             });
 
             var images = wall.container.find("a");
-            images.find("img").load(function() {
+            images.find("img").load(function () {
                 wall.fitWidth();
+            });
+        },
+        lazyLoad: function () {
+            $(".gallery img").lazyload({
+                effect: "fadeIn"
             });
         },
         submitForm: function (e) {
@@ -73,7 +80,7 @@
     };
     app.initialize();
 }());
-$(window).load(function() {
+$(window).load(function () {
 
     $(".loader_inner").fadeOut();
     $(".loader").delay(400).fadeOut("slow");
