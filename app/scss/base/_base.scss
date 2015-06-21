@@ -23,6 +23,7 @@ body textarea:required:valid {
 .hidden {
   display: none;
 }
+
 //PRELOADER
 .loader {
   background: none repeat scroll 0 0 #ffffff;
@@ -35,6 +36,7 @@ body textarea:required:valid {
   width: 100%;
   z-index: 9999;
 }
+
 .loader .loader_inner {
   background-image: url("../images/preloader.gif");
   background-size: cover;
@@ -49,6 +51,7 @@ body textarea:required:valid {
   top: 50%;
   position: absolute;
 }
+
 //END PRELOAD
 
 //ASIDE
@@ -72,10 +75,10 @@ body textarea:required:valid {
     & .btn_mnu {
       background: transparent;
     }
-    & li a::before{
+    & li a::before {
       margin-left: -32px;
     }
-    & .aside_content nav{
+    & .aside_content nav {
       margin: 35px 0;
     }
     & .aside_content li:hover a {
@@ -83,7 +86,6 @@ body textarea:required:valid {
     }
 
   }
-
 
 }
 
@@ -211,25 +213,32 @@ body textarea:required:valid {
 .btn_mnu.active .btn_row:nth-child(2) {
   opacity: 0;
 }
+
 //CONTENT
-.content{
+.content {
   position: relative;
   margin: 5px 5px 55px 55px;
   left: 0;
 }
 
-.gallery{
-   a{
+.gallery {
+  a {
     overflow: hidden;
     width: 320px;
     display: block;
+    min-height: 50px;
   }
-   img{
+  img {
     display: block;
     max-width: 100%;
+    transition: all 15s;
+    &:hover{
+      transform: scale(5);
+    }
   }
 }
-.left_side.active  + .content{
+
+.left_side.active + .content {
   left: 250px;
   transition: all .5s;
   transition-delay: .5s;

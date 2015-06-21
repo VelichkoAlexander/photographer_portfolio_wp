@@ -50,6 +50,11 @@
             var images = wall.container.find("a");
             images.find("img").load(function () {
                 wall.fitWidth();
+            }).parent().hover(function(){
+                $(".gallery a").css("opacity",".6");
+                $(this).css("opacity","1");
+                }, function(){
+                $(".gallery a").css("opacity","1");
             });
         },
         lazyLoad: function () {
