@@ -50,11 +50,20 @@
             var images = wall.container.find("a");
             images.find("img").load(function () {
                 wall.fitWidth();
-            }).parent().hover(function(){
-                $(".gallery a").css("opacity",".6");
-                $(this).css("opacity","1");
-                }, function(){
-                $(".gallery a").css("opacity","1");
+            }).parent().hover(function () {
+                $(".gallery a").css("opacity", ".8");
+                $(this).css("opacity", "1");
+            }, function () {
+                $(".gallery a").css("opacity", "1");
+            });
+            $(".filter_label").click(function () {
+                $(".filter_label").removeClass("active");
+                var filter = $(this).addClass("active").data("filter");
+                wall.filter(filter);
+                setTimeout(function () {
+                    $(window).resize();
+                    wall.fitWidth();
+                }, 400);
             });
         },
         lazyLoad: function () {

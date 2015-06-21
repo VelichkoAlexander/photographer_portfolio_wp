@@ -232,7 +232,7 @@ body textarea:required:valid {
     display: block;
     max-width: 100%;
     transition: all 15s;
-    &:hover{
+    &:hover {
       transform: scale(5);
     }
   }
@@ -242,4 +242,30 @@ body textarea:required:valid {
   left: 250px;
   transition: all .5s;
   transition-delay: .5s;
+}
+
+.filter_items {
+  position: fixed;
+  bottom: 0;
+  color: #ffffff;
+  right: 0;
+  text-align: right;
+  width: 100%;
+  padding: 10px 10px 0;
+  background-color: #181818;
+}
+
+.filter_label {
+  background: transparent;
+  transition: all .5s;
+  padding: 5px 15px;
+  opacity: .4;
+  margin: 0 3px 15px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  border: 1px solid #ffffff;
+  &:hover, &.active {
+    background: tomato;
+    opacity: 1;
+  }
 }
