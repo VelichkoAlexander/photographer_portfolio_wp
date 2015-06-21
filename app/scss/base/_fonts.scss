@@ -1,5 +1,12 @@
 @import "../bourbon/bourbon";
-body{
-  font:17px/36px Roboto,Arial,sans-serif;
-}
 
+@include font-face("RalewayBold", "../fonts/RalewayBold/RalewayBold", $file-formats: eot woff ttf);
+@include font-face("RalewayLight", "../fonts/RalewayLight/RalewayLight", $file-formats: eot woff ttf);
+@include font-face("RalewayRegular", "../fonts/RalewayRegular/RalewayRegular", $file-formats: eot woff ttf);
+@include font-face("RobotoBold", "../fonts/RobotoBold/RobotoBold", $file-formats: eot woff ttf);
+@include font-face("RobotoLight", "../fonts/RobotoLight/RobotoLight", $file-formats: eot woff ttf);
+@include font-face("RobotoRegular", "../fonts/RobotoRegular/RobotoRegular", $file-formats: eot woff ttf);
+
+
+
+@import "linea";

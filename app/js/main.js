@@ -11,7 +11,10 @@
 
         },
         setUpListeners: function () {
-
+            $(".btn_mnu").click(function() {
+                $(this).toggleClass("active");
+                $(".left_side").toggleClass("active");
+            });
         },
 
       svgFallbak:function(){
@@ -20,6 +23,11 @@
                   return $(this).attr("src").replace(".svg", ".png");
               });
           };
+        },
+        niceScrolle:function(){
+          $("body").niceScroll({
+              horizrailenamled:false
+          })
         },
         submitForm: function (e) {
             $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
