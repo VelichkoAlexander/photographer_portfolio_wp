@@ -1,0 +1,9 @@
+#folders
+.idea
+.sass-cache
+node_modules
+bower_components
+
+
+
+app/components

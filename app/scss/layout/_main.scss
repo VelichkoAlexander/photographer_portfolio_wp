@@ -1,0 +1,20 @@
+@import "../bourbon/bourbon";
+
+body{
+  -webkit-font-smoothing: antialiased;
+  color: #666;
+  min-width: 320px!important;
+  }
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid{
+  color: red;
+}
+
+
+.hidden{
+  display: none
+}
+
+
+

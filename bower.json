@@ -1,0 +1,28 @@
+{
+  "name": "Emptytemplate",
+  "version": "0.0.2",
+  "homepage": "",
+  "authors": [
+    "Alexandr Velichko <fessal@Rambler.ru>"
+  ],
+  "description": "template",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+  },
+  "keywords": [
+    "template",
+    "html",
+    "css"
+  ],
+  "license": "MIT",
+  "dependencies": {
+  }
+}
